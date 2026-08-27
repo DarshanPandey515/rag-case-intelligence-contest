@@ -6,6 +6,8 @@ Single-page React app built with Vite. It lets a user ask questions, see the ans
 
 - Question input with sample question buttons.
 - Answer panel with a list of collapsible sources/evidence.
+- Animated pipeline indicator while the backend processes a question (searching, ranking, writing).
+- Typewriter effect while the answer is revealed, with sources fading in afterward.
 - Loading and error states.
 - PDF upload section for adding documents to the index.
 
@@ -16,7 +18,7 @@ frontend/
 ├── src/
 │   ├── main.jsx        app entry point
 │   ├── App.jsx         main UI
-│   └── styles.css      styles
+│   └── index.css       Tailwind CSS entry + custom animations
 ├── index.html
 ├── package.json
 ├── vite.config.js
