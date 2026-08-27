@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    container_name: rag-backend
+    env_file:
+      - .env
+    environment:
+      - DOCS_DIR=/app/data/documents
+      - TRANSCRIPTS_DIR=/app/data/transcripts
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: rag-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
